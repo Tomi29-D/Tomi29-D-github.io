@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Finca Siempre Verde - Uvas de alta calidad para bodegas prestigiosas">
+    <meta name="keywords" content="Finca, Uvas, Vino, Malbec, Tempranillo, Uvas de alta calidad">
+    <meta name="author" content="Finca Siempre Verde">
+    <title>Finca Siempre Verde</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Playfair+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+ 
+    <section id="titulo-principal">
+        <h1>Finca Siempre Verde</h1>
+        <p>La mejor uva para las mejores bodegas.</p>
+    </section>
+
+ 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#acerca">Acerca de</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="./Contactanos.html">Contacto</a></li>
+                <li><a href="#buscar"><i class="fas fa-search"></i> Buscar</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Bienvenidos a Finca Siempre Verde</h2>
+        <p>Somos una finca dedicada a la producción de uvas de alta calidad, cultivadas con pasión y respeto por la tierra.</p>
+    </section>
+
+    <section id="acerca">
+        <h2>Acerca de Nosotros</h2>
+        <p>Con más de 30 años en la industria, nuestra finca ha sido el origen de las uvas utilizadas en algunos de los vinos más prestigiosos de la región.</p>
+        <img src="./IMG/IMG-20241013-WA0041.jpg" alt="Imagen del viñedo">
+    </section>
+
+    <section id="productos">
+        <h2>Nuestras Variedades de Uva</h2>
+        <div class="productos-container">
+            <div class="producto">
+                <img src="./IMG/uva malbec.webp" alt="Uva Malbec de alta calidad">
+                <h3>Malbec</h3>
+                <p>De cuerpo robusto y sabor intenso, ideal para vinos premiados.</p>
+                <button class="cta-link" data-uva="Malbec">Ver más</button>
+            </div>
+            <div class="producto">
+                <img src="./IMG/cabernet suavigno.webp" alt="Uva Cabernet Sauvignon de alta calidad">
+                <h3>Cabernet Sauvignon</h3>
+                <p>Perfecta para vinos elegantes con notas frutales.</p>
+                <button class="cta-link" data-uva="Cabernet_Sauvignon">Ver más</button>
+            </div>
+            <div class="producto">
+                <img src="./IMG/tempranillo.webp" alt="Uva Tempranillo de alta calidad">
+                <h3>Tempranillo</h3>
+                <p>Una opción clásica para vinos con tradición y carácter.</p>
+                <button class="cta-link" data-uva="Tempranillo">Ver más</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería</h2>
+        <div class="gallery">
+            <img src="./IMG/malbeck.jpeg" alt="Uva Malbec">
+            <img src="./IMG/cabernet.jpeg" alt="Uva Cabernet">
+            <img src="./IMG/viñedo en el atardecer.jpeg" alt="Viñedos en el atardecer">
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para consultas o pedidos, no dudes en contactarnos a través del siguiente formulario:</p>
+        <form action="enviar.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+
+            <button type="submit" class="cta">Enviar</button>
+        </form>
+        <p>O contáctanos directamente por WhatsApp: <a href="https://wa.me/+5492614679900">Click aquí</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Finca Siempre Verde. Todos los derechos reservados.</p>
+    </footer>
+
+   
+    <script>
+        document.querySelectorAll('.cta-link').forEach(button => {
+            button.addEventListener('click', function() {
+                const uva = this.getAttribute('data-uva');
+                const url = `https://es.wikipedia.org/wiki/${uva}`;
+                window.open(url, '_blank');
+            });
+        });
+    </script>
+
+</body>
+</html>

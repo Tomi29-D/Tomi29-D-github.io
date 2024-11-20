@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./home.html">
+    <title>Document</title>
+  </head>
+  <body>
+    <center>    <h2>¡Bienvenido a Finca Siempre Verde!</h2>
+    <h2>Porfavor complete el login</h2></center>
+
+
+  <div class="animation">
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <circle r="32" cy="40" cx="40" id="test"></circle>
+      </svg>
+    </div>
+    
+    <div class="loader triangle">
+      <svg viewBox="0 0 86 80">
+        <polygon points="43 8 79 72 7 72"></polygon>
+      </svg>
+    </div>
+    
+    <div class="loader">
+      <svg viewBox="0 0 80 80">
+        <rect height="64" width="64" y="8" x="8"></rect>
+      </svg>
+    </div>
+  </div>
+    
+<center>
+    <button onclick="document.getElementById('abrirLogin').style.display='block'" style="width:auto;">Login</button>
+  </center>
+    <div id="abrirLogin" class="modal">
+
+      <div class="modal-content animate">
+
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('abrirLogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Usuario</b></label>
+          <input type="text" placeholder="Ingrese usuario" name="uname" required id="usuario">
+
+          <label for="psw"><b>Contraseña</b></label>
+          <input type="password" placeholder="Ingrese contraseña" name="psw" required id="pass">
+            
+          <button type="submit" value="entrar" onclick="loguearse()" >Ingresar</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('abrirLogin').style.display='none'" class="cancelbtn">Cancelar</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="./main.js"></script>
+    
+  </body>
+</html>
